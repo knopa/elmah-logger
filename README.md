@@ -51,7 +51,7 @@ public class MyClass
     logger.Log("Sample message");
     logger.Log("Sample message", "Event.Name");
     logger.Log(new Exception("Mesage");
-	logger.Log("Sample message", new Exception("Mesage");
+    logger.Log("Sample message", new Exception("Mesage");
     logger.Log("Sample message", new Exception("Mesage"), "Event.Name");
   }
 }

@@ -56,7 +56,7 @@ namespace ElmahLogger
             }
             catch (Exception ex)
             {
-                Trace.TraceError($"Logger.Write ex:{ex}");
+                Trace.TraceError($"Logger.Write message:{message} exception:{exception} type:{type} ex:{ex}");
             }
         }
 

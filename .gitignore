@@ -1,6 +1,6 @@
 /*.user
-/ElmahLogger/bin
-/ElmahLogger/obj
+/src/bin
+/src/obj
 /*.suo
 /.vs
 /packages

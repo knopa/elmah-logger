@@ -1,5 +1,7 @@
 # ElmahLogger
 
+[![AppVeyour Build](https://ci.appveyor.com/api/projects/status/nq7b4h95ucugasoc?svg=true)](https://ci.appveyor.com/project/knopa/elmah-logger)
+
 ElmahLogger is a free logging platform for .NET for extending Elmah
 
 ## License

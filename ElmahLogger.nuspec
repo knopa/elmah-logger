@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ElmahLogger</id>
+    <version>1.0.6</version>
+    <authors>Sergey Slepokurov</authors>
+    <owners>Sergey Slepokurov</owners>
+    <licenseUrl>https://github.com/webinerds/elmah-logger/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/webinerds/elmah-logger</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ElmahLogger - logger for Elmah</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Elmah logger log</tags>
+    <dependencies>
+		<dependency id="elmah.corelibrary" version="1.2.2" />
+		<dependency id="System.ValueTuple" version="4.3.0" />
+    </dependencies>
+  </metadata>
+</package>

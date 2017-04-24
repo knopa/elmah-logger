@@ -4,6 +4,15 @@
 
 ElmahLogger is a free logging platform for .NET for extending Elmah
 
+Installation
+-------------
+
+ElmahLogger is available as a NuGet package. You can install it using the NuGet Package Console window:
+
+```
+PM> Install-Package ElmahLogger
+```
+
 ## License
 ---
 ElmahLogger is open source software, licensed under the terms of MIT license.

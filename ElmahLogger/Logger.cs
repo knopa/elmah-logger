@@ -12,6 +12,7 @@ namespace ElmahLogger
     public class Logger : ILogger
     {
         private const string Info = "Info";
+        private const int MaxMessageSize = 500;
         private const int StackTraceSkipMethods = 0;
         private readonly Type loggerType = typeof(Logger);
         public string Name { get; private set; }
@@ -45,12 +46,15 @@ namespace ElmahLogger
                                  : type;
                 message = message ?? exception?.Message;
                 error.Type = typeLog ?? Info;
-                error.Message = message;
-                error.Time = DateTime.Now;
-                error.HostName = Environment.MachineName;
                 error.Source = source;
+                error.Message = message;
+                error.Time = DateTime.UtcNow;
+                error.HostName = Environment.MachineName;
                 error.Detail = exception == null ? logInfo.file : exception.StackTrace;
-
+                if (message?.Length >= MaxMessageSize)
+                {
+                    error.Detail = message + " \r\n" + error.Detail;
+                }
                 ErrorLog.GetDefault(httpContext)
                         .Log(error);
             }
@@ -66,12 +70,12 @@ namespace ElmahLogger
             int firstUserFrame = FindCallingMethodOnStackTrace(stackTrace, loggerType);
             return new LogEvent
             {
-                StackTrace =  stackTrace,
+                StackTrace = stackTrace,
                 UserStackFrameNumber = firstUserFrame
             };
         }
 
-        
+
         internal static int FindCallingMethodOnStackTrace(StackTrace stackTrace, Type loggerType)
         {
             var stackFrames = stackTrace.GetFrames();

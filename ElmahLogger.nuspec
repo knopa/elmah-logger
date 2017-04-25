@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ElmahLogger</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <authors>Sergey Slepokurov</authors>
     <owners>Sergey Slepokurov</owners>
     <licenseUrl>https://github.com/webinerds/elmah-logger/blob/master/LICENSE.txt</licenseUrl>
@@ -13,8 +13,14 @@
     <copyright>Copyright 2017</copyright>
     <tags>Elmah logger log</tags>
     <dependencies>
-		<dependency id="elmah.corelibrary" version="1.2.2" />
-		<dependency id="System.ValueTuple" version="4.3.0" />
+		<group targetFramework="net462">
+			<dependency id="elmah.corelibrary" version="1.2.2" />
+			<dependency id="System.ValueTuple" version="4.3.0" />
+		  </group>
     </dependencies>
   </metadata>
+   <files>
+    <file src="src\bin\Debug\ElmahLogger.dll" target="lib\net462" />
+    <file src="src\bin\Debug\ElmahLogger.pdb" target="lib\net462" />
+  </files>
 </package>
